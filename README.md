@@ -4,4 +4,5 @@ This repository contains examples of SQL I have written, feel free to take a loo
 
 # Projects
 1. Superstore Database
+2. Fortune 500 Analysis
 
