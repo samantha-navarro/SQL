@@ -41,6 +41,10 @@ GROUP BY product;
 
 SELECT COUNT(Customer.acctnum)AS Cust, AVG(quantity)*price AS average FROM BIT_DB.FebSales AS Feb
 LEFT JOIN BIT_DB.customers AS Customer
+ON Feb.orderID = Customer.order_id
+WHERE Feb.Quantity > 2
+AND length(orderid) = 6
+AND orderid <> 'OrderID'
 
 #Filtering
 
@@ -49,8 +53,4 @@ LEFT JOIN BIT_DB.customers AS Customer
 SELECT product, SUM(quantity) FROM BIT_DB.FebSales
 WHERE location LIKE '%Los Angeles%'
 GROUP BY product;
-ON Feb.orderID = Customer.order_id
-WHERE Feb.Quantity > 2
-AND length(orderid) = 6
-AND orderid <> 'OrderID'
 
