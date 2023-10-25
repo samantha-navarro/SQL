@@ -1,0 +1,24 @@
+# A dataset named chinook1 that represents a Digital Media Store dataset which includes tables for artists, albums, media tracks, invoices, and customers.
+#Answering a few questions that seem interesting to find out
+
+#1. Show Customers (their full names, customer ID, and country) who are not in the US.
+
+SELECT FirstName, LastName, CustomerID, Country
+FROM chinook1.customers
+WHERE Country <> 'US'
+
+#2. Show only Customers from Brazil
+
+SELECT * FROM chinook1.customers
+WHERE Country = 'Brazil'
+
+#2. Find the Invoices of customers who are from Brazil. 
+# The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
+# Joining Tables
+
+SELECT cust.FirstName, cust.LastName, inv.InvoiceID, inv.InvoiceDate, inv.BillingCountry 
+FROM chinook1.invoices as inv
+LEFT JOIN chinook1.customers as cust
+WHERE inv.BillingCountry = 'Brazil';
+
+
