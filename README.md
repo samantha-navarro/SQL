@@ -9,3 +9,4 @@ This repository contains examples of SQL I have written with CC Program, feel fr
 4. Customer and Order Analytics (using SQLite Studio)
 5. Spotify Data (Kaggle and SQLite Studio)
 6. City Bike Lanes Analysis (Integrating Window Function)
+7. Digital Media Store Project
